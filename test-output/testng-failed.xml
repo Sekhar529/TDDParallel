@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="IE"/>
+  <test name="CHTest">
+    <parameter name="browser" value="ch"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestCases.TC1"/>
+      <class name="TestCases.TC2"/>
+    </classes>
+  </test> <!-- CHTest -->
+  <test name="IETest">
+    <parameter name="browser" value="IE"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestCases.TC1"/>
+      <class name="TestCases.TC2"/>
+    </classes>
+  </test> <!-- IETest -->
+  <test name="CHTest(failed)" parallel="tests">
+    <parameter name="browser" value="ch"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestCases.TC1">
+        <methods>
+          <include name="teardownTest"/>
+          <include name="teardownTest"/>
+          <include name="extentReportSetup"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="teardownMetod"/>
+          <include name="teardownMetod"/>
+          <include name="flushReport"/>
+          <include name="flushReport"/>
+          <include name="setupMetod"/>
+          <include name="setupMetod"/>
+        </methods>
+      </class> <!-- TestCases.TC1 -->
+      <class name="TestCases.TC2">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="teardownMetod"/>
+          <include name="teardownMetod"/>
+          <include name="flushReport"/>
+          <include name="flushReport"/>
+          <include name="step1" invocation-numbers="0"/>
+          <include name="setupMetod"/>
+          <include name="setupMetod"/>
+        </methods>
+      </class> <!-- TestCases.TC2 -->
+    </classes>
+  </test> <!-- CHTest(failed) -->
+  <test name="IETest(failed)" parallel="tests">
+    <parameter name="browser" value="IE"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestCases.TC1">
+        <methods>
+          <include name="teardownTest"/>
+          <include name="teardownTest"/>
+          <include name="extentReportSetup"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="teardownMetod"/>
+          <include name="teardownMetod"/>
+          <include name="flushReport"/>
+          <include name="flushReport"/>
+          <include name="setupMetod"/>
+          <include name="setupMetod"/>
+        </methods>
+      </class> <!-- TestCases.TC1 -->
+      <class name="TestCases.TC2">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="teardownMetod"/>
+          <include name="teardownMetod"/>
+          <include name="flushReport"/>
+          <include name="flushReport"/>
+          <include name="step1" invocation-numbers="0"/>
+          <include name="setupMetod"/>
+          <include name="setupMetod"/>
+        </methods>
+      </class> <!-- TestCases.TC2 -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

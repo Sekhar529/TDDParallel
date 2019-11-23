@@ -1,0 +1,6 @@
+Base\BrowsersBase.class
+RetryAnalyzer\AnnotationTrasnformer.class
+RetryAnalyzer\TestAnalyzer.class
+TestCases\TC2.class
+Base\TestBase.class
+TestCases\TC1.class

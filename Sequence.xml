@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="RetryAnalyzer.AnnotationTrasnformer" />
+	</listeners>
+	<test name="CHTst">
+		<parameter name="browser" value="ch" />
+		<groups>
+			<run>
+				<include name="smoke" />
+			</run>
+		</groups>
+		<classes>
+			<class name="TestCases.TC1" />
+			<class name="TestCases.TC2" />
+		</classes>
+	</test>
+	<test name="IETst">
+		<parameter name="browser" value="IE"></parameter>
+		<groups>
+			<run>
+				<include name="regression" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="TestCases.TC1" />
+			<class name="TestCases.TC2" />
+		</classes>
+	</test>
+
+
+</suite>
