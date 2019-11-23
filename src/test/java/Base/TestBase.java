@@ -23,9 +23,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import Utils.captureScreenshot;
 
-public class TestBase {
-
-
+public class TestBase
+{
 	public  ExtentHtmlReporter htmlReporter;
 	public  static ExtentReports reporter;//don't remove static here otherwise you will get null pointer exception
 	public  ExtentTest test;
