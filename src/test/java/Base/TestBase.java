@@ -58,6 +58,8 @@ public class TestBase
 		reporter.setSystemInfo("OS",System.getProperty("OS"));
 		reporter.setSystemInfo("User","Sekhar");
 	}
+	
+	
 	@BeforeClass(alwaysRun=true)
 	public void beforeClass(ITestContext context)
 	{ 
