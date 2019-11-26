@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <!-- Don't required to include groups in xml file when running the .xml file from maven cmd   -->
+
 <suite name="Suite" parallel="tests" thread-count="2">
 
 	<test name="CHTest">
