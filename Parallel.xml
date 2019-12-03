@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<!-- Don't required to include groups in xml file when running the .xml file from maven cmd   -->
+<!-- Don't required to include groups in xml file when running the .xml file 
+	from maven cmd -->
 
 <suite name="Suite" parallel="tests" thread-count="2">
 
 	<test name="CHTest">
 		<parameter name="browser" value="ch"></parameter>
-		<!-- <groups> -->
-		<!-- <run> -->
-		<!-- <include name="smoke" /> -->
-		<!-- <include name="regression"/> -->
-		<!-- </run> -->
-		<!-- </groups> -->
+		<groups>
+			<run>
+				<include name="smoke" />
+				<!-- <include name="regression"/> -->
+			</run>
+		</groups>
 		<classes>
 			<class name="TestCases.TC1" />
 			<class name="TestCases.TC2" />
@@ -21,12 +22,12 @@
 
 	<test name="IETest">
 		<parameter name="browser" value="IE"></parameter>
-		<!-- <groups> -->
-		<!-- <run> -->
-		<!-- <include name="smoke" /> -->
-		<!-- <include name="regression"/> -->
-		<!-- </run> -->
-		<!-- </groups> -->
+		<groups>
+			<run>
+				<include name="smoke" />
+				<!-- <include name="regression"/> -->
+			</run>
+		</groups>
 
 		<classes>
 			<class name="TestCases.TC1" />
