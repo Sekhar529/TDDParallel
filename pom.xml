@@ -47,17 +47,19 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M3</version>
-				<!-- <configuration>
-				
-				<includes>
-				<include>TC1.java</include></includes>
-				<test>${testName}</test>
-				<groups>${groups}</groups>
-				<groups>regression</groups>
-				<suiteXmlFiles>
-				<suiteXmlFile>${xmlFiles}</suiteXmlFile>
-				</suiteXmlFiles>
-				</configuration> -->
+
+				<configuration>
+					<includes>
+						<include>TC1.java</include>
+						<include>TC2.java</include>
+					</includes>
+					<!-- <test>${testName}</test> -->
+					<groups>${groups}</groups>
+					<!-- <groups>regression</groups> -->
+					<suiteXmlFiles>
+						<suiteXmlFile>${xmlFiles}</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
