@@ -54,11 +54,11 @@
 						<include>TC2.java</include>
 					</includes>
 					<!-- <test>${testName}</test> -->
-					<!-- <groups>${groups}</groups>-->
+					<groups>${groups}</groups>
 					<!-- <groups>regression</groups> -->
 					<suiteXmlFiles>
-						<!-- <suiteXmlFile>${xmlFiles}</suiteXmlFile>-->
-						<suiteXmlFile>Parallel.xml</suiteXmlFile>
+						<suiteXmlFile>${xmlFiles}</suiteXmlFile>
+						<!-- <suiteXmlFile>Parallel.xml</suiteXmlFile> -->
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
