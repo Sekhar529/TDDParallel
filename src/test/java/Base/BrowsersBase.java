@@ -50,7 +50,7 @@ public class BrowsersBase {
 		
 		if(browserName.equalsIgnoreCase("CH")) 
 		{
-			System.setProperty("webdriver.chrome.driver","../TDDParllel/Drivers/chromedriver.exe" );
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
 			setDriver(new ChromeDriver() );
 			WebDriver driver = getDriver();
 
@@ -64,7 +64,7 @@ public class BrowsersBase {
 		
 		else if(browserName.equalsIgnoreCase("IE")) 
 		{
-			System.setProperty("webdriver.ie.driver","../TDDParllel/Drivers/IEDriverServer.exe" );
+			System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+"/Drivers/IEDriverServer.exe" );
 			
 			InternetExplorerOptions options = new InternetExplorerOptions();
 			options.ignoreZoomSettings().introduceFlakinessByIgnoringSecurityDomains().withInitialBrowserUrl("https://www.fresherslive.com");
@@ -82,7 +82,7 @@ public class BrowsersBase {
 
 		else if(browserName.equalsIgnoreCase("FF")) 
 		{
-			System.setProperty("webdriver.gecko.driver","../TDDParllel/Drivers/geckodriver.exe" );
+			System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"/Drivers/geckodriver.exe" );
 			
 			FirefoxOptions options = new FirefoxOptions();
 			options.setLegacy(true);
