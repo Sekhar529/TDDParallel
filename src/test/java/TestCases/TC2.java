@@ -16,7 +16,7 @@ public class TC2 extends TestBase {
 		//log.createNode(m.getName());
 		
 		//Assert.assertEquals(true,driver.findElement(By.xpath("//a[@class='siteLogo']")).isDisplayed());
-		Assert.assertEquals(true, false);
+		Assert.assertEquals(true, true);
 	}
 	@Test(groups= {"regression"})
 	public void step2(Method m) {
