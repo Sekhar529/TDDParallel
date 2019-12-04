@@ -18,7 +18,7 @@ public class BrowsersBase {
 
 	protected ThreadLocal<WebDriver> Threaddriver = new ThreadLocal<WebDriver>();
 	private static Properties prop;
-	private final String propFilePath="../TDDParllel/src/main/java/Config/config.properties";
+	private final String propFilePath = System.getProperty("user.dir")+"/src/main/java/Config/config.properties";
 	
 	public BrowsersBase() throws IOException {
 		
