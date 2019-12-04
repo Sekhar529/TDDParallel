@@ -103,8 +103,8 @@ public class TestBase
 			imgPath = imgPath+".png";
 			System.out.println("with name fullpath:"+imgPath);
 			childNode.log(Status.FAIL,"failed screenCapture found here: ",MediaEntityBuilder.createScreenCaptureFromPath(imgPath,"screenshot").build());
-			/*try {
-			childNode.addScreencastFromPath(imgPath);}catch(IOException e) {}*/
+			try {
+			childNode.addScreencastFromPath(imgPath);}catch(IOException e) {}
 			parentNode.fail("FAILED");
 			//test.fail("FAILED").addScreencastFromPath(imgPath);
 		}
