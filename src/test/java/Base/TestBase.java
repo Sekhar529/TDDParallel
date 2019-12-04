@@ -17,7 +17,9 @@ import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.model.ScreenCapture;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
@@ -97,10 +99,12 @@ public class TestBase
 			childNode.log(Status.FAIL, "TestCase " +res.getName()+" FAILED");
 			childNode.log(Status.FAIL, "Exception thrown is: "+res.getThrowable());
 			String imgPath = new captureScreenshot(driver).takeScreenshot(res.getName());
-			System.out.println("image was stored in path:"+imgPath);
-			childNode.log(Status.FAIL,"failed screenCapture found here: ");
-			try {
-			childNode.addScreencastFromPath(imgPath+".png");}catch(IOException e) {}
+			//System.out.print("image was stored in path:"+imgPath);
+			imgPath = imgPath+".png";
+			System.out.println("with name fullpath:"+imgPath);
+			childNode.log(Status.FAIL,"failed screenCapture found here: ",MediaEntityBuilder.createScreenCaptureFromPath(imgPath,"screenshot").build());
+			/*try {
+			childNode.addScreencastFromPath(imgPath);}catch(IOException e) {}*/
 			parentNode.fail("FAILED");
 			//test.fail("FAILED").addScreencastFromPath(imgPath);
 		}
